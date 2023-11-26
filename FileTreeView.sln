@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileTreeView", "FileTreeView\FileTreeView.csproj", "{1F35200C-5CF3-421B-B813-BF587B68BCFC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileTreeViewWPF", "FileTreeViewWPF\FileTreeViewWPF.csproj", "{2223FA33-95F5-4AC6-8E0F-8CA5D2C2DF8C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{1F35200C-5CF3-421B-B813-BF587B68BCFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F35200C-5CF3-421B-B813-BF587B68BCFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F35200C-5CF3-421B-B813-BF587B68BCFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2223FA33-95F5-4AC6-8E0F-8CA5D2C2DF8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2223FA33-95F5-4AC6-8E0F-8CA5D2C2DF8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2223FA33-95F5-4AC6-8E0F-8CA5D2C2DF8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2223FA33-95F5-4AC6-8E0F-8CA5D2C2DF8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

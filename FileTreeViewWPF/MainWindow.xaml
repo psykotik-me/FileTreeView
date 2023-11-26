@@ -1,0 +1,46 @@
+﻿<Window x:Class="FileTreeViewWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FileTreeViewWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="642" Width="987">
+    <Grid  Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label>Drives and files:</Label>
+        <TreeView x:Name="treeView1" Grid.ColumnSpan="1" Grid.Row="2"/>
+        <ListView x:Name="listView1" Grid.Column="1" Grid.RowSpan="2">
+            <ListView.View>
+                <GridView x:Name="gridView1">
+                    <GridViewColumn Header="Name" Width="Auto"  DisplayMemberBinding="{Binding Path=Name}"/>
+                    <GridViewColumn Header="Extension" Width="Auto"  DisplayMemberBinding="{Binding Path=Extension}"/>
+                    <GridViewColumn Header="Size" Width="Auto"  DisplayMemberBinding="{Binding Path=Size}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+    </Grid>
+    <Window.Resources>
+        <DataTemplate x:Key="folderViewItem">
+            <DockPanel>
+                <Image Height="30" Width="30" Source="/folder.png"/>
+                <TextBlock VerticalAlignment="center" Text ="{Binding Path=Header, RelativeSource={RelativeSource AncestorType={x:Type TreeViewItem}}}"/>
+            </DockPanel>
+        </DataTemplate>
+        <DataTemplate x:Key="fileViewItem">
+            <DockPanel>
+                <Image Height="30" Width="30" Source="/File.png"/>
+                <TextBlock VerticalAlignment="center" Text ="{Binding Path=Header, RelativeSource={RelativeSource AncestorType={x:Type TreeViewItem}}}"/>
+            </DockPanel>
+        </DataTemplate>
+    </Window.Resources>    
+</Window>
+     
